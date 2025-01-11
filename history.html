@@ -1,13 +1,13 @@
-<html><head><base href="/" />
+<!DOCTYPE html>
+<html>
+<head>
 <title>History - Space Research</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<meta charset="UTF-8">
+<meta name="description" content="Explore the final frontier with the latest in space exploration, technology, missions, and more.">
+<meta name="keywords" content="Space Exploration, Technology, Missions, Gallery, News, Research, Education, Careers, Partners, History, Future, Community">
+<meta name="author" content="Eren Acar">
 <style>
-  :root {
-    --primary: #1a237e;
-    --secondary: #283593;
-    --text: #ffffff;
-    --background: #000000;
-  }
-
   * {
     margin: 0;
     padding: 0;
@@ -16,12 +16,12 @@
   }
 
   body {
-    background-color: var(--background);
-    color: var(--text);
+    background-color: #1A1A1A;
+    color: #ffffff;
   }
 
   nav {
-    background: var(--primary);
+    background: #1a237e;
     padding: 1rem;
     position: sticky;
     top: 0;
@@ -36,7 +36,7 @@
   }
 
   .nav-links a {
-    color: var(--text);
+    color: #ffffff;
     text-decoration: none;
     font-size: 1.1rem;
     transition: color 0.3s;
@@ -54,7 +54,7 @@
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: var(--secondary);
+    background-color: #283593;
     min-width: 160px;
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
     z-index: 1;
@@ -65,14 +65,14 @@
   }
 
   .dropdown-content a {
-    color: var(--text);
+    color: #ffffff;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
   }
 
   .dropdown-content a:hover {
-    background-color: var(--primary);
+    background-color: #1a237e;
   }
 
   .history-container {
@@ -91,7 +91,7 @@
     content: '';
     position: absolute;
     width: 6px;
-    background-color: var(--secondary);
+    background-color: #283593;
     top: 0;
     bottom: 0;
     left: 50%;
@@ -102,14 +102,6 @@
     padding: 10px 40px;
     position: relative;
     width: 50%;
-    opacity: 0;
-    transform: translateX(-50px);
-    transition: all 0.5s ease;
-  }
-
-  .timeline-item.visible {
-    opacity: 1;
-    transform: translateX(0);
   }
 
   .timeline-item::after {
@@ -119,7 +111,7 @@
     height: 25px;
     right: -17px;
     background-color: #7986cb;
-    border: 4px solid var(--primary);
+    border: 4px solid #1a237e;
     top: 15px;
     border-radius: 50%;
     z-index: 1;
@@ -139,7 +131,7 @@
 
   .timeline-content {
     padding: 20px 30px;
-    background-color: var(--secondary);
+    background-color: #283593;
     position: relative;
     border-radius: 6px;
   }
@@ -152,7 +144,7 @@
   }
 
   .milestone-card {
-    background: var(--secondary);
+    background: #283593;
     padding: 1.5rem;
     border-radius: 8px;
     transition: transform 0.3s;
@@ -169,54 +161,43 @@
     margin-bottom: 3rem;
     border-radius: 10px;
   }
-
-  @media screen and (max-width: 768px) {
-    .timeline::after {
-      left: 31px;
-    }
-    
-    .timeline-item {
-      width: 100%;
-      padding-left: 70px;
-      padding-right: 25px;
-    }
-    
-    .timeline-item.right {
-      left: 0%;
-    }
-    
-    .timeline-item.left::after,
-    .timeline-item.right::after {
-      left: 15px;
-    }
+  footer {
+    background: #1a237e;
+    color: #ffffff;
+    text-align: center;
+    padding: 1.7rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
   }
+
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<nav>
-  <ul class="nav-links">
-    <li><a href="https://space-explorer.com/home">Home</a></li>
-    <li><a href="https://space-explorer.com/missions">Missions</a></li>
-    <li><a href="https://space-explorer.com/technology">Technology</a></li>
-    <li><a href="https://space-explorer.com/gallery">Gallery</a></li>
-    <li><a href="https://space-explorer.com/news">News</a></li>
-    <li><a href="https://space-explorer.com/research">Research</a></li>
-    <li><a href="https://space-explorer.com/contact">Contact</a></li>
-    <li class="dropdown">
-      <a href="https://space-explorer.com/more" class="dropbtn">More</a>
-      <div class="dropdown-content">
-        <a href="https://space-explorer.com/education">Education</a>
-        <a href="https://space-explorer.com/careers">Careers</a>
-        <a href="https://space-explorer.com/partners">Partners</a>
-        <a href="https://space-explorer.com/history">History</a>
-        <a href="https://space-explorer.com/future">Future</a>
-        <a href="https://space-explorer.com/community">Community</a>
-      </div>
-    </li>
-  </ul>
-</nav>
+  <nav>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="missions.html">Missions</a></li>
+      <li><a href="technology.html">Technology</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li class="dropdown">
+        <a href="more.html" class="dropbtn">More</a>
+        <div class="dropdown-content">
+          <a href="education.html">Education</a>
+          <a href="careers.html">Careers</a>
+          <a href="partners.html">Partners</a>
+          <a href="history.html">History</a>
+          <a href="future.html">Future</a>
+          <a href="community.html">Community</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
 
 <div class="history-container">
   <div class="hero-section">
@@ -294,25 +275,7 @@
     </div>
   </div>
 </div>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const timelineItems = document.querySelectorAll('.timeline-item');
-  
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, {
-    threshold: 0.1
-  });
-
-  timelineItems.forEach(item => {
-    observer.observe(item);
-  });
-});
-</script>
-
+<footer>
+  <p style="text-align: center; margin-top: 1rem;">Copyright &copy; Eren Acar</p>
+</footer>
 </body></html>
