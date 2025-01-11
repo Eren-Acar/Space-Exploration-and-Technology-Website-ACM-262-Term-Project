@@ -1,13 +1,14 @@
-<html><head><base href="/" />
+<!DOCTYPE html>
+<html>
+<head>
 <title>Careers - Space Research</title>
-<style>
-  :root {
-    --primary: #1a237e;
-    --secondary: #283593;
-    --text: #ffffff;
-    --background: #000000;
-  }
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<meta charset="UTF-8">
+<meta name="description" content="Explore the final frontier with the latest in space exploration, technology, missions, and more.">
+<meta name="keywords" content="Space Exploration, Technology, Missions, Gallery, News, Research, Education, Careers, Partners, History, Future, Community">
+<meta name="author" content="Eren Acar">
 
+<style>
   * {
     margin: 0;
     padding: 0;
@@ -16,12 +17,12 @@
   }
 
   body {
-    background-color: var(--background);
-    color: var(--text);
+    background-color: #1A1A1A;
+    color: #ffffff;
   }
 
   nav {
-    background: var(--primary);
+    background: #1a237e;
     padding: 1rem;
     position: sticky;
     top: 0;
@@ -36,7 +37,7 @@
   }
 
   .nav-links a {
-    color: var(--text);
+    color: #ffffff;
     text-decoration: none;
     font-size: 1.1rem;
     transition: color 0.3s;
@@ -54,7 +55,7 @@
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: var(--secondary);
+    background-color: #283593;
     min-width: 160px;
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
     z-index: 1;
@@ -65,14 +66,14 @@
   }
 
   .dropdown-content a {
-    color: var(--text);
+    color: #ffffff;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
   }
 
   .dropdown-content a:hover {
-    background-color: var(--primary);
+    background-color: #1a237e;
   }
 
   .careers-container {
@@ -83,12 +84,9 @@
 
   .job-section {
     margin-bottom: 3rem;
-    background: var(--secondary);
+    background: #283593;
     border-radius: 10px;
     padding: 2rem;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.5s ease-out;
   }
 
   .job-grid {
@@ -122,7 +120,7 @@
     display: inline-block;
     padding: 0.8rem 1.5rem;
     background: #7986cb;
-    color: var(--text);
+    color: #ffffff;
     text-decoration: none;
     border-radius: 5px;
     transition: background 0.3s;
@@ -170,12 +168,12 @@
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 4px;
     background: rgba(255, 255, 255, 0.05);
-    color: var(--text);
+    color: #ffffff;
   }
 
   .submit-button {
     background: #7986cb;
-    color: var(--text);
+    color: #ffffff;
     padding: 1rem 2rem;
     border: none;
     border-radius: 5px;
@@ -187,38 +185,43 @@
     background: #5c6bc0;
   }
 
-  @media screen and (max-width: 768px) {
-    .job-grid {
-      grid-template-columns: 1fr;
-    }
+  footer {
+    background: #1a237e;
+    color: #ffffff;
+    text-align: center;
+    padding: 1.7rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
   }
+
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<nav>
-  <ul class="nav-links">
-    <li><a href="https://space-explorer.com/home">Home</a></li>
-    <li><a href="https://space-explorer.com/missions">Missions</a></li>
-    <li><a href="https://space-explorer.com/technology">Technology</a></li>
-    <li><a href="https://space-explorer.com/gallery">Gallery</a></li>
-    <li><a href="https://space-explorer.com/news">News</a></li>
-    <li><a href="https://space-explorer.com/research">Research</a></li>
-    <li><a href="https://space-explorer.com/contact">Contact</a></li>
-    <li class="dropdown">
-      <a href="https://space-explorer.com/more" class="dropbtn">More</a>
-      <div class="dropdown-content">
-        <a href="https://space-explorer.com/education">Education</a>
-        <a href="https://space-explorer.com/careers">Careers</a>
-        <a href="https://space-explorer.com/partners">Partners</a>
-        <a href="https://space-explorer.com/history">History</a>
-        <a href="https://space-explorer.com/future">Future</a>
-        <a href="https://space-explorer.com/community">Community</a>
-      </div>
-    </li>
-  </ul>
-</nav>
+  <nav>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="missions.html">Missions</a></li>
+      <li><a href="technology.html">Technology</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li class="dropdown">
+        <a href="more.html" class="dropbtn">More</a>
+        <div class="dropdown-content">
+          <a href="education.html">Education</a>
+          <a href="careers.html">Careers</a>
+          <a href="partners.html">Partners</a>
+          <a href="history.html">History</a>
+          <a href="future.html">Future</a>
+          <a href="community.html">Community</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
 
 <div class="careers-container">
   <h1>Career Opportunities</h1>
@@ -235,7 +238,6 @@
           <li>Type: Full-time</li>
           <li>Experience: 5+ years</li>
         </ul>
-        <a href="https://space-explorer.com/careers/aerospace-engineer" class="apply-button">Apply Now</a>
       </div>
       <div class="job-card">
         <h3>Research Scientist</h3>
@@ -245,7 +247,6 @@
           <li>Type: Full-time</li>
           <li>Experience: 3+ years</li>
         </ul>
-        <a href="https://space-explorer.com/careers/research-scientist" class="apply-button">Apply Now</a>
       </div>
       <div class="job-card">
         <h3>Mission Controller</h3>
@@ -255,7 +256,6 @@
           <li>Type: Full-time</li>
           <li>Experience: 4+ years</li>
         </ul>
-        <a href="https://space-explorer.com/careers/mission-controller" class="apply-button">Apply Now</a>
       </div>
     </div>
   </div>
@@ -284,7 +284,7 @@
 
   <div class="job-section">
     <h2>Application Form</h2>
-    <form class="application-form">
+    <form class="application-form" action="https://www.w3schools.com/action_page.php" target="_blank">
       <div class="form-group">
         <label for="name">Full Name</label>
         <input type="text" id="name" name="name" required>
@@ -315,30 +315,9 @@
   </div>
 </div>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const sections = document.querySelectorAll('.job-section');
-  
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = 1;
-        entry.target.style.transform = 'translateY(0)';
-      }
-    });
-  }, {
-    threshold: 0.1
-  });
+<footer>
+  <p style="text-align: center; margin-top: 1rem;">Copyright &copy; Eren Acar</p>
+</footer>
 
-  sections.forEach(section => {
-    observer.observe(section);
-  });
-
-  document.querySelector('.application-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    alert('Thank you for your application! We will review it and get back to you soon.');
-  });
-});
-</script>
-
-</body></html>
+</body>
+</html>
