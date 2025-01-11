@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>More - Space Research</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<meta charset="UTF-8">
+<meta name="description" content="Explore the final frontier with the latest in space exploration, technology, missions, and more.">
+<meta name="keywords" content="Space Exploration, Technology, Missions, Gallery, News, Research, Education, Careers, Partners, History, Future, Community">
+<meta name="author" content="Eren Acar">
+
+<style>
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Exo 2', sans-serif;
+  }
+
+  body {
+    background-color: #1A1A1A;
+    color: #ffffff;
+  }
+
+  nav {
+    background: #1a237e;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover {
+    color: #7986cb;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #283593;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-content a {
+    color: #ffffff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #1a237e;
+  }
+
+  .more-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+  }
+
+  .more-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .more-card {
+    background: #283593;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s;
+  }
+
+  .more-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .more-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    object-fit: cover;
+  }
+
+  .more-card h3 {
+    margin-bottom: 1rem;
+  }
+
+  .more-card p {
+    margin-bottom: 1.5rem;
+  }
+
+  .more-btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: #7986cb;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+
+  .more-btn:hover {
+    background: #5c6bc0;
+  }
+
+  footer {
+    background: #1a237e;
+    color: #ffffff;
+    text-align: center;
+    padding: 1.7rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="missions.html">Missions</a></li>
+    <li><a href="technology.html">Technology</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="news.html">News</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li class="dropdown">
+      <a href="more.html" class="dropbtn">More</a>
+      <div class="dropdown-content">
+        <a href="education.html">Education</a>
+        <a href="careers.html">Careers</a>
+        <a href="partners.html">Partners</a>
+        <a href="history.html">History</a>
+        <a href="future.html">Future</a>
+        <a href="community.html">Community</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<div class="more-container">
+  <h1>Additional Resources</h1>
+  <p>Explore more about space exploration and research through our additional programs and initiatives.</p>
+
+  <div class="more-grid">
+    <div class="more-card">
+      <img src="images/icon.png" alt="Education Programs"/>
+      <h3>Education Programs</h3>
+      <p>Discover our educational initiatives for students and educators.</p>
+      <a href="education.html" class="more-btn">Learn More</a>
+    </div>
+
+    <div class="more-card">
+      <img src="images/career.png" alt="Career Opportunities"/>
+      <h3>Career Opportunities</h3>
+      <p>Join our team of space exploration professionals.</p>
+      <a href="careers.html" class="more-btn">View Careers</a>
+    </div>
+
+    <div class="more-card">
+      <img src="images/partners.png" alt="Partners"/>
+      <h3>Partners</h3>
+      <p>Learn about our collaborations with organizations worldwide.</p>
+      <a href="partners.html" class="more-btn">View Partners</a>
+    </div>
+
+    <div class="more-card">
+      <img src="images/history.png" alt="History"/>
+      <h3>History</h3>
+      <p>Explore the rich history of space exploration.</p>
+      <a href="history.html" class="more-btn">Learn History</a>
+    </div>
+
+    <div class="more-card">
+      <img src="images/future.png"Future Projects"/>
+      <h3>Future Projects</h3>
+      <p>Discover upcoming missions and innovations.</p>
+      <a href="future.html" class="more-btn">Explore Future</a>
+    </div>
+
+    <div class="more-card">
+      <img src="images/community.png" alt="Community"/>
+      <h3>Community</h3>
+      <p>Join our community of space enthusiasts.</p>
+      <a href="community.html" class="more-btn">Join Community</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p style="text-align: center; margin-top: 1rem;">Copyright &copy; Eren Acar</p>
+</footer>
+
+</body>
+</html>

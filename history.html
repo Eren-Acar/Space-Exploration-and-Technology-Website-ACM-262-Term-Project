@@ -1,0 +1,318 @@
+<html><head><base href="/" />
+<title>History - Space Research</title>
+<style>
+  :root {
+    --primary: #1a237e;
+    --secondary: #283593;
+    --text: #ffffff;
+    --background: #000000;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Exo 2', sans-serif;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--text);
+  }
+
+  nav {
+    background: var(--primary);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover {
+    color: #7986cb;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--secondary);
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-content a {
+    color: var(--text);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    background-color: var(--primary);
+  }
+
+  .history-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+  }
+
+  .timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 3rem auto;
+  }
+
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: var(--secondary);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+
+  .timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.5s ease;
+  }
+
+  .timeline-item.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: #7986cb;
+    border: 4px solid var(--primary);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  .timeline-item.left {
+    left: 0;
+  }
+
+  .timeline-item.right {
+    left: 50%;
+  }
+
+  .timeline-item.right::after {
+    left: -16px;
+  }
+
+  .timeline-content {
+    padding: 20px 30px;
+    background-color: var(--secondary);
+    position: relative;
+    border-radius: 6px;
+  }
+
+  .milestone-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+  }
+
+  .milestone-card {
+    background: var(--secondary);
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: transform 0.3s;
+  }
+
+  .milestone-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .hero-section {
+    text-align: center;
+    padding: 4rem 0;
+    background: linear-gradient(rgba(26, 35, 126, 0.7), rgba(40, 53, 147, 0.7));
+    margin-bottom: 3rem;
+    border-radius: 10px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .timeline::after {
+      left: 31px;
+    }
+    
+    .timeline-item {
+      width: 100%;
+      padding-left: 70px;
+      padding-right: 25px;
+    }
+    
+    .timeline-item.right {
+      left: 0%;
+    }
+    
+    .timeline-item.left::after,
+    .timeline-item.right::after {
+      left: 15px;
+    }
+  }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav>
+  <ul class="nav-links">
+    <li><a href="https://space-explorer.com/home">Home</a></li>
+    <li><a href="https://space-explorer.com/missions">Missions</a></li>
+    <li><a href="https://space-explorer.com/technology">Technology</a></li>
+    <li><a href="https://space-explorer.com/gallery">Gallery</a></li>
+    <li><a href="https://space-explorer.com/news">News</a></li>
+    <li><a href="https://space-explorer.com/research">Research</a></li>
+    <li><a href="https://space-explorer.com/contact">Contact</a></li>
+    <li class="dropdown">
+      <a href="https://space-explorer.com/more" class="dropbtn">More</a>
+      <div class="dropdown-content">
+        <a href="https://space-explorer.com/education">Education</a>
+        <a href="https://space-explorer.com/careers">Careers</a>
+        <a href="https://space-explorer.com/partners">Partners</a>
+        <a href="https://space-explorer.com/history">History</a>
+        <a href="https://space-explorer.com/future">Future</a>
+        <a href="https://space-explorer.com/community">Community</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<div class="history-container">
+  <div class="hero-section">
+    <h1>History of Space Exploration</h1>
+    <p>Journey through time to discover humanity's greatest adventures beyond Earth</p>
+  </div>
+
+  <div class="timeline">
+    <div class="timeline-item left">
+      <div class="timeline-content">
+        <h2>1957</h2>
+        <h3>Sputnik 1 Launch</h3>
+        <p>The Space Age begins with the launch of the first artificial satellite by the Soviet Union.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item right">
+      <div class="timeline-content">
+        <h2>1961</h2>
+        <h3>First Human in Space</h3>
+        <p>Yuri Gagarin becomes the first human to orbit Earth in Vostok 1.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item left">
+      <div class="timeline-content">
+        <h2>1969</h2>
+        <h3>Moon Landing</h3>
+        <p>Neil Armstrong and Buzz Aldrin become the first humans to walk on the Moon during Apollo 11.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item right">
+      <div class="timeline-content">
+        <h2>1981</h2>
+        <h3>Space Shuttle Era</h3>
+        <p>The first reusable spacecraft, Space Shuttle Columbia, launches into orbit.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item left">
+      <div class="timeline-content">
+        <h2>1998</h2>
+        <h3>International Space Station</h3>
+        <p>Construction begins on humanity's first permanent space residence.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item right">
+      <div class="timeline-content">
+        <h2>2012</h2>
+        <h3>Mars Curiosity</h3>
+        <p>NASA's Curiosity rover lands on Mars to study the planet's geology and climate.</p>
+      </div>
+    </div>
+  </div>
+
+  <h2>Major Milestones</h2>
+  <div class="milestone-grid">
+    <div class="milestone-card">
+      <h3>Space Race</h3>
+      <p>The competition between the United States and Soviet Union drove rapid advancement in space technology.</p>
+    </div>
+    <div class="milestone-card">
+      <h3>Voyager Missions</h3>
+      <p>Twin spacecraft launched in 1977 continue to explore the outer solar system and interstellar space.</p>
+    </div>
+    <div class="milestone-card">
+      <h3>Hubble Space Telescope</h3>
+      <p>Launched in 1990, revolutionizing our understanding of the universe with spectacular images.</p>
+    </div>
+    <div class="milestone-card">
+      <h3>Commercial Space</h3>
+      <p>Private companies like SpaceX and Blue Origin usher in a new era of space exploration.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const timelineItems = document.querySelectorAll('.timeline-item');
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  timelineItems.forEach(item => {
+    observer.observe(item);
+  });
+});
+</script>
+
+</body></html>

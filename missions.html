@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Space Exploration Missions</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<meta charset="UTF-8">
+<meta name="description" content="Explore the final frontier with the latest in space exploration, technology, missions, and more.">
+<meta name="keywords" content="Space Exploration, Technology, Missions, Gallery, News, Research, Education, Careers, Partners, History, Future, Community">
+<meta name="author" content="Eren Acar">
+
+<style>
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Exo 2', sans-serif;
+  }
+
+  body {
+    background-color: #1A1A1A;
+    color: #ffffff;
+  }
+
+  nav {
+    background: #1a237e;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover {
+    color: #7986cb;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #283593;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-content a {
+    color: #ffffff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #1a237e;
+  }
+
+  .content-section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .mission-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .mission-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .mission-card {
+    background: #283593;
+    border-radius: 10px;
+    padding: 2rem;
+    transition: transform 0.3s;
+  }
+
+  .mission-card:hover {
+    transform: translateY(-10px);
+  }
+
+  .mission-status {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    margin: 1rem 0;
+  }
+
+  .active {
+    background: #4caf50;
+  }
+
+  .planned {
+    background: #ff9800;
+  }
+
+  .completed {
+    background: #2196f3;
+  }
+
+  .timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 4rem auto;
+  }
+
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #283593;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+
+  .timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+  }
+
+  .timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: #1a237e;
+    border: 4px solid #283593;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  .left {
+    left: 0;
+  }
+
+  .right {
+    left: 50%;
+  }
+
+  .right::after {
+    left: -16px;
+  }
+
+  @media screen and (max-width: 600px) {
+    .timeline::after {
+      left: 31px;
+    }
+    
+    .timeline-item {
+      width: 100%;
+      padding-left: 70px;
+      padding-right: 25px;
+    }
+    
+    .timeline-item::after {
+      left: 15px;
+    }
+    
+    .right {
+      left: 0%;
+    }
+  }
+
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    margin-top: 1rem;
+  }
+
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  footer {
+    background: #1a237e;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 4rem;
+
+  }
+
+  th {
+    background: #161f5e;
+    color: #ffffff;
+    padding: 1rem;
+  }
+
+  td {
+    background: #1a237e;
+    color: #ffffff;
+    padding: 1rem;
+  }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="missions.html">Missions</a></li>
+      <li><a href="technology.html">Technology</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li class="dropdown">
+        <a href="more.html" class="dropbtn">More</a>
+        <div class="dropdown-content">
+          <a href="education.html">Education</a>
+          <a href="careers.html">Careers</a>
+          <a href="partners.html">Partners</a>
+          <a href="history.html">History</a>
+          <a href="future.html">Future</a>
+          <a href="community.html">Community</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+<div class="content-section">
+  <div class="mission-header">
+    <h1>Current Space Missions</h1>
+    <p>Exploring the frontiers of space through groundbreaking missions</p>
+  </div>
+
+  <div class="mission-grid">
+    <div class="mission-card">
+      <h2>Artemis Program</h2>
+      <span class="mission-status active">Active</span>
+      <p>NASA's ambitious program to return humans to the Moon and establish sustainable lunar presence.</p>
+
+      <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/-YNZiasRG0Q?si=zUcdiFDQ-JBswzjw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <div class="mission-card">
+      <h2>Mars Sample Return</h2>
+      <span class="mission-status planned">Planned</span>
+      <p>Joint NASA-ESA mission to return samples from Mars to Earth for detailed analysis.</p>
+      <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/t9G36CDLzIg?si=LrDURXTg215EKDSD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <div class="mission-card">
+      <h2>OSIRIS-REx</h2>
+      <span class="mission-status completed">Completed</span>
+      <p>Successfully collected samples from asteroid Bennu, returning to Earth in 2023.</p>
+      <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/vZxGPyh-4_g?si=zgJNswHaJU7La1WU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="timeline">
+    <div class="timeline-item left">
+      <div class="mission-card">
+        <h3>2024</h3>
+        <h4>Artemis II</h4>
+        <p>First crewed flight around the Moon since Apollo</p>
+      </div>
+    </div>
+
+    <div class="timeline-item right">
+      <div class="mission-card">
+        <h3>2025</h3>
+        <h4>Artemis III</h4>
+        <p>First woman and next man on the Moon</p>
+      </div>
+    </div>
+
+    <div class="timeline-item left">
+      <div class="mission-card">
+        <h3>2026</h3>
+        <h4>Europa Clipper</h4>
+        <p>Exploring Jupiter's icy moon</p>
+      </div>
+    </div>
+
+    <div class="timeline-item right">
+      <div class="mission-card">
+        <h3>2027</h3>
+        <h4>Mars Sample Return</h4>
+        <p>First samples from Mars arrive on Earth</p>
+      </div>
+    </div>
+  </div>
+
+  <table>
+    <tr>
+      <th>Mission Name</th>
+      <th>Launch Date</th>
+      <th>Destination</th>
+      <th>Status</th>
+      <th>Lead Agency</th>
+    </tr>
+    <tr>
+      <td>Artemis II</td>
+      <td>2024</td>
+      <td>Moon</td>
+      <td>In Progress</td>
+      <td>NASA</td>
+    </tr>
+    <tr>
+      <td>Europa Clipper</td>
+      <td>2024</td>
+      <td>Jupiter's Moon Europa</td>
+      <td>In Development</td>
+      <td>NASA</td>
+    </tr>
+    <tr>
+      <td>DAVINCI</td>
+      <td>2029</td>
+      <td>Venus</td>
+      <td>Planned</td>
+      <td>NASA</td>
+    </tr>
+    <tr>
+      <td>Dragonfly</td>
+      <td>2027</td>
+      <td>Saturn's Moon Titan</td>
+      <td>In Development</td>
+      <td>NASA</td>
+    </tr>
+  </table>
+</div>
+
+
+<footer>
+  <p style="text-align: center; margin-top: 1rem;">Copyright &copy; Eren Acar</p>
+</footer>
+
+</body></html>

@@ -1,0 +1,313 @@
+<html><head><base href="/" />
+<title>Partners - Space Research</title>
+<style>
+  :root {
+    --primary: #1a237e;
+    --secondary: #283593;
+    --text: #ffffff;
+    --background: #000000;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Exo 2', sans-serif;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--text);
+  }
+
+  nav {
+    background: var(--primary);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover {
+    color: #7986cb;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--secondary);
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-content a {
+    color: var(--text);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    background-color: var(--primary);
+  }
+
+  .partners-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+  }
+
+  .hero-section {
+    text-align: center;
+    padding: 4rem 0;
+    background: linear-gradient(rgba(26, 35, 126, 0.7), rgba(40, 53, 147, 0.7));
+    margin-bottom: 3rem;
+    border-radius: 10px;
+  }
+
+  .partner-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .partner-card {
+    background: var(--secondary);
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+
+  .partner-card:hover {
+    transform: translateY(-10px);
+  }
+
+  .partner-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1rem;
+  }
+
+  .partner-type {
+    margin: 3rem 0;
+    padding: 2rem;
+    border-radius: 10px;
+    background: rgba(40, 53, 147, 0.3);
+  }
+
+  .collaboration-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+    text-align: center;
+  }
+
+  .stat-card {
+    background: var(--primary);
+    padding: 2rem;
+    border-radius: 10px;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    .partner-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav>
+  <ul class="nav-links">
+    <li><a href="https://space-explorer.com/home">Home</a></li>
+    <li><a href="https://space-explorer.com/missions">Missions</a></li>
+    <li><a href="https://space-explorer.com/technology">Technology</a></li>
+    <li><a href="https://space-explorer.com/gallery">Gallery</a></li>
+    <li><a href="https://space-explorer.com/news">News</a></li>
+    <li><a href="https://space-explorer.com/research">Research</a></li>
+    <li><a href="https://space-explorer.com/contact">Contact</a></li>
+    <li class="dropdown">
+      <a href="https://space-explorer.com/more" class="dropbtn">More</a>
+      <div class="dropdown-content">
+        <a href="https://space-explorer.com/education">Education</a>
+        <a href="https://space-explorer.com/careers">Careers</a>
+        <a href="https://space-explorer.com/partners">Partners</a>
+        <a href="https://space-explorer.com/history">History</a>
+        <a href="https://space-explorer.com/future">Future</a>
+        <a href="https://space-explorer.com/community">Community</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<div class="partners-container">
+  <div class="hero-section">
+    <h1>Our Global Partners</h1>
+    <p>Collaborating across borders to advance space exploration and research</p>
+  </div>
+
+  <div class="collaboration-stats">
+    <div class="stat-card">
+      <div class="stat-number">150+</div>
+      <p>Global Partners</p>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number">45</div>
+      <p>Countries</p>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number">500+</div>
+      <p>Joint Projects</p>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number">25+</div>
+      <p>Years of Collaboration</p>
+    </div>
+  </div>
+
+  <div class="partner-type">
+    <h2>Space Agencies</h2>
+    <div class="partner-grid">
+      <div class="partner-card">
+        <svg class="partner-icon" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="45" fill="none" stroke="#fff" stroke-width="2"/>
+          <path d="M20,50 L80,50 M50,20 L50,80" stroke="#fff" stroke-width="2"/>
+        </svg>
+        <h3>NASA</h3>
+        <p>National Aeronautics and Space Administration</p>
+      </div>
+      <div class="partner-card">
+        <svg class="partner-icon" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="45" fill="none" stroke="#fff" stroke-width="2"/>
+          <path d="M25,50 A25,25 0 0,1 75,50" stroke="#fff" stroke-width="2" fill="none"/>
+        </svg>
+        <h3>ESA</h3>
+        <p>European Space Agency</p>
+      </div>
+      <div class="partner-card">
+        <svg class="partner-icon" viewBox="0 0 100 100">
+          <rect x="25" y="25" width="50" height="50" fill="none" stroke="#fff" stroke-width="2"/>
+          <circle cx="50" cy="50" r="20" fill="none" stroke="#fff" stroke-width="2"/>
+        </svg>
+        <h3>JAXA</h3>
+        <p>Japan Aerospace Exploration Agency</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="partner-type">
+    <h2>Research Institutions</h2>
+    <div class="partner-grid">
+      <div class="partner-card">
+        <svg class="partner-icon" viewBox="0 0 100 100">
+          <polygon points="50,20 80,80 20,80" fill="none" stroke="#fff" stroke-width="2"/>
+        </svg>
+        <h3>Universities</h3>
+        <p>Leading academic institutions worldwide</p>
+      </div>
+      <div class="partner-card">
+        <svg class="partner-icon" viewBox="0 0 100 100">
+          <rect x="30" y="30" width="40" height="40" fill="none" stroke="#fff" stroke-width="2"/>
+          <circle cx="50" cy="50" r="25" fill="none" stroke="#fff" stroke-width="2"/>
+        </svg>
+        <h3>Research Labs</h3>
+        <p>Specialized research facilities</p>
+      </div>
+      <div class="partner-card">
+        <svg class="partner-icon" viewBox="0 0 100 100">
+          <path d="M20,80 L50,20 L80,80" fill="none" stroke="#fff" stroke-width="2"/>
+        </svg>
+        <h3>Think Tanks</h3>
+        <p>Space policy and strategy organizations</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="partner-type">
+    <h2>Industry Partners</h2>
+    <div class="partner-grid">
+      <div class="partner-card">
+        <svg class="partner-icon" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="30" fill="none" stroke="#fff" stroke-width="2"/>
+          <path d="M20,50 L80,50" stroke="#fff" stroke-width="2"/>
+        </svg>
+        <h3>Aerospace Companies</h3>
+        <p>Leading spacecraft and equipment manufacturers</p>
+      </div>
+      <div class="partner-card">
+        <svg class="partner-icon" viewBox="0 0 100 100">
+          <rect x="25" y="25" width="50" height="50" fill="none" stroke="#fff" stroke-width="2" rx="10"/>
+        </svg>
+        <h3>Technology Firms</h3>
+        <p>Innovation and software development partners</p>
+      </div>
+      <div class="partner-card">
+        <svg class="partner-icon" viewBox="0 0 100 100">
+          <path d="M20,80 C20,40 80,40 80,80" fill="none" stroke="#fff" stroke-width="2"/>
+        </svg>
+        <h3>Startups</h3>
+        <p>Emerging space technology companies</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const cards = document.querySelectorAll('.partner-card');
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = 1;
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  cards.forEach(card => {
+    card.style.opacity = 0;
+    card.style.transform = 'translateY(20px)';
+    card.style.transition = 'all 0.5s ease-out';
+    observer.observe(card);
+  });
+});
+</script>
+
+</body></html>

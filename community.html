@@ -1,0 +1,332 @@
+<html><head><base href="/" />
+<title>Space Community - Join Fellow Space Enthusiasts</title>
+<style>
+  :root {
+    --primary: #1a237e;
+    --secondary: #283593;
+    --text: #ffffff;
+    --background: #000000;
+    --accent: #7986cb;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Exo 2', sans-serif;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--text);
+  }
+
+  nav {
+    background: var(--primary);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover {
+    color: var(--accent);
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--secondary);
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-content a {
+    color: var(--text);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    background-color: var(--primary);
+  }
+
+  .community-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .hero-section {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(rgba(26, 35, 126, 0.7), rgba(40, 53, 147, 0.7));
+    border-radius: 15px;
+    margin-bottom: 3rem;
+  }
+
+  .hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+  }
+
+  .feature-card {
+    background: var(--secondary);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+
+  .feature-card:hover {
+    transform: translateY(-10px);
+  }
+
+  .feature-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1rem;
+  }
+
+  .events-section {
+    background: rgba(40, 53, 147, 0.3);
+    padding: 3rem;
+    border-radius: 15px;
+    margin: 3rem 0;
+  }
+
+  .event-card {
+    background: var(--secondary);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .join-section {
+    text-align: center;
+    padding: 3rem;
+    background: linear-gradient(rgba(26, 35, 126, 0.7), rgba(40, 53, 147, 0.7));
+    border-radius: 15px;
+  }
+
+  .join-button {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--text);
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    text-decoration: none;
+    margin-top: 1rem;
+    transition: transform 0.3s ease;
+  }
+
+  .join-button:hover {
+    transform: scale(1.05);
+  }
+
+  .stats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+  }
+
+  .stat-card {
+    background: var(--secondary);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .nav-links {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .event-card {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav>
+  <ul class="nav-links">
+    <li><a href="https://space-explorer.com/home">Home</a></li>
+    <li><a href="https://space-explorer.com/missions">Missions</a></li>
+    <li><a href="https://space-explorer.com/technology">Technology</a></li>
+    <li><a href="https://space-explorer.com/gallery">Gallery</a></li>
+    <li><a href="https://space-explorer.com/news">News</a></li>
+    <li><a href="https://space-explorer.com/research">Research</a></li>
+    <li><a href="https://space-explorer.com/contact">Contact</a></li>
+    <li class="dropdown">
+      <a href="https://space-explorer.com/more" class="dropbtn">More</a>
+      <div class="dropdown-content">
+        <a href="https://space-explorer.com/education">Education</a>
+        <a href="https://space-explorer.com/careers">Careers</a>
+        <a href="https://space-explorer.com/partners">Partners</a>
+        <a href="https://space-explorer.com/history">History</a>
+        <a href="https://space-explorer.com/future">Future</a>
+        <a href="https://space-explorer.com/community">Community</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<div class="community-container">
+  <div class="hero-section">
+    <h1>Join Our Space Community</h1>
+    <p>Connect with fellow space enthusiasts and explore the cosmos together</p>
+  </div>
+
+  <div class="stats-container">
+    <div class="stat-card">
+      <div class="stat-number" id="memberCount">10,000+</div>
+      <p>Active Members</p>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number" id="eventsCount">50+</div>
+      <p>Monthly Events</p>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number" id="countriesCount">75+</div>
+      <p>Countries Represented</p>
+    </div>
+  </div>
+
+  <div class="features-grid">
+    <div class="feature-card">
+      <svg class="feature-icon" viewBox="0 0 100 100">
+        <circle cx="50" cy="40" r="20" fill="none" stroke="white" stroke-width="2"/>
+        <path d="M30,80 Q50,60 70,80" fill="none" stroke="white" stroke-width="2"/>
+      </svg>
+      <h3>Discussion Forums</h3>
+      <p>Engage in meaningful conversations about space exploration</p>
+    </div>
+    
+    <div class="feature-card">
+      <svg class="feature-icon" viewBox="0 0 100 100">
+        <rect x="20" y="20" width="60" height="60" fill="none" stroke="white" stroke-width="2"/>
+        <circle cx="50" cy="50" r="15" fill="none" stroke="white" stroke-width="2"/>
+        <line x1="50" y1="20" x2="50" y2="35" stroke="white" stroke-width="2"/>
+      </svg>
+      <h3>Virtual Events</h3>
+      <p>Attend online lectures, workshops, and stargazing sessions</p>
+    </div>
+    
+    <div class="feature-card">
+      <svg class="feature-icon" viewBox="0 0 100 100">
+        <polygon points="50,20 80,80 20,80" fill="none" stroke="white" stroke-width="2"/>
+        <circle cx="50" cy="60" r="10" fill="none" stroke="white" stroke-width="2"/>
+      </svg>
+      <h3>Citizen Science</h3>
+      <p>Contribute to real space research projects</p>
+    </div>
+  </div>
+
+  <div class="events-section">
+    <h2>Upcoming Community Events</h2>
+    <div class="event-card">
+      <h3>Virtual Star Party</h3>
+      <p>Join us for a guided tour of the night sky</p>
+      <span>May 15, 2024</span>
+    </div>
+    <div class="event-card">
+      <h3>Space Photography Workshop</h3>
+      <p>Learn astrophotography techniques</p>
+      <span>May 22, 2024</span>
+    </div>
+    <div class="event-card">
+      <h3>Ask An Astronomer</h3>
+      <p>Live Q&A session with space experts</p>
+      <span>May 30, 2024</span>
+    </div>
+  </div>
+
+  <div class="join-section">
+    <h2>Ready to Join?</h2>
+    <p>Become part of our growing community of space enthusiasts</p>
+    <a href="https://space-explorer.com/signup" class="join-button">Join Now</a>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Animate stats on scroll
+  const stats = document.querySelectorAll('.stat-card');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.transform = 'scale(1.05)';
+        setTimeout(() => {
+          entry.target.style.transform = 'scale(1)';
+        }, 300);
+      }
+    });
+  }, {
+    threshold: 0.5
+  });
+
+  stats.forEach(stat => {
+    observer.observe(stat);
+  });
+
+  // Feature cards hover effect
+  const featureCards = document.querySelectorAll('.feature-card');
+  featureCards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      card.style.transform = 'translateY(-10px)';
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'translateY(0)';
+    });
+  });
+});
+</script>
+
+</body></html>

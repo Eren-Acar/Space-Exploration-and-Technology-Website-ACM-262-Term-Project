@@ -1,0 +1,273 @@
+<html><head><base href="/" />
+<title>Education Programs - Space Research</title>
+<style>
+  :root {
+    --primary: #1a237e;
+    --secondary: #283593;
+    --text: #ffffff;
+    --background: #000000;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Exo 2', sans-serif;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--text);
+  }
+
+  nav {
+    background: var(--primary);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover {
+    color: #7986cb;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--secondary);
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-content a {
+    color: var(--text);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    background-color: var(--primary);
+  }
+
+  .education-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+  }
+
+  .program-section {
+    margin-bottom: 3rem;
+    background: var(--secondary);
+    border-radius: 10px;
+    padding: 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease-out;
+  }
+
+  .program-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .resource-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .resource-card h3 {
+    margin-bottom: 1rem;
+    color: #7986cb;
+  }
+
+  .cta-button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: #7986cb;
+    color: var(--text);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+    margin-top: 1rem;
+  }
+
+  .cta-button:hover {
+    background: #5c6bc0;
+  }
+
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    margin: 2rem 0;
+  }
+
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media screen and (max-width: 768px) {
+    .program-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav>
+  <ul class="nav-links">
+    <li><a href="https://space-explorer.com/home">Home</a></li>
+    <li><a href="https://space-explorer.com/missions">Missions</a></li>
+    <li><a href="https://space-explorer.com/technology">Technology</a></li>
+    <li><a href="https://space-explorer.com/gallery">Gallery</a></li>
+    <li><a href="https://space-explorer.com/news">News</a></li>
+    <li><a href="https://space-explorer.com/research">Research</a></li>
+    <li><a href="https://space-explorer.com/contact">Contact</a></li>
+    <li class="dropdown">
+      <a href="https://space-explorer.com/more" class="dropbtn">More</a>
+      <div class="dropdown-content">
+        <a href="https://space-explorer.com/education">Education</a>
+        <a href="https://space-explorer.com/careers">Careers</a>
+        <a href="https://space-explorer.com/partners">Partners</a>
+        <a href="https://space-explorer.com/history">History</a>
+        <a href="https://space-explorer.com/future">Future</a>
+        <a href="https://space-explorer.com/community">Community</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<div class="education-container">
+  <h1>Space Education Programs</h1>
+  <p>Inspiring the next generation of space explorers through comprehensive educational initiatives.</p>
+
+  <div class="program-section">
+    <h2>Featured Educational Content</h2>
+    <div class="video-container">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/libKVRa01L8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <div class="program-section">
+    <h2>Student Programs</h2>
+    <div class="program-grid">
+      <div class="resource-card">
+        <h3>Space Camp</h3>
+        <p>Immersive summer programs for students aged 9-18</p>
+        <a href="https://space-explorer.com/education/space-camp" class="cta-button">Learn More</a>
+      </div>
+      <div class="resource-card">
+        <h3>Young Astronauts</h3>
+        <p>After-school program focusing on space science</p>
+        <a href="https://space-explorer.com/education/young-astronauts" class="cta-button">Join Program</a>
+      </div>
+      <div class="resource-card">
+        <h3>Science Competitions</h3>
+        <p>Annual space science fair and competitions</p>
+        <a href="https://space-explorer.com/education/competitions" class="cta-button">Register Now</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="program-section">
+    <h2>Educator Resources</h2>
+    <div class="program-grid">
+      <div class="resource-card">
+        <h3>Lesson Plans</h3>
+        <p>Comprehensive space science curriculum materials</p>
+        <a href="https://space-explorer.com/education/lessons" class="cta-button">Access Resources</a>
+      </div>
+      <div class="resource-card">
+        <h3>Professional Development</h3>
+        <p>Teacher training and certification programs</p>
+        <a href="https://space-explorer.com/education/training" class="cta-button">Enroll Now</a>
+      </div>
+      <div class="resource-card">
+        <h3>Classroom Activities</h3>
+        <p>Hands-on experiments and activities</p>
+        <a href="https://space-explorer.com/education/activities" class="cta-button">View Activities</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="program-section">
+    <h2>Online Learning</h2>
+    <div class="program-grid">
+      <div class="resource-card">
+        <h3>Virtual Courses</h3>
+        <p>Self-paced online space science courses</p>
+        <a href="https://space-explorer.com/education/courses" class="cta-button">Browse Courses</a>
+      </div>
+      <div class="resource-card">
+        <h3>Live Webinars</h3>
+        <p>Interactive sessions with space experts</p>
+        <a href="https://space-explorer.com/education/webinars" class="cta-button">Register</a>
+      </div>
+      <div class="resource-card">
+        <h3>Digital Library</h3>
+        <p>Educational videos and interactive content</p>
+        <a href="https://space-explorer.com/education/library" class="cta-button">Explore</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const sections = document.querySelectorAll('.program-section');
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = 1;
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+});
+</script>
+
+</body></html>

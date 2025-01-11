@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Space Technology & Innovations</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<meta charset="UTF-8">
+<meta name="description" content="Explore the final frontier with the latest in space exploration, technology, missions, and more.">
+<meta name="keywords" content="Space Exploration, Technology, Missions, Gallery, News, Research, Education, Careers, Partners, History, Future, Community">
+<meta name="author" content="Eren Acar">
+<style>
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Exo 2', sans-serif;
+  }
+
+  body {
+    background-color: #1A1A1A;
+    color: #ffffff;
+  }
+
+  nav {
+    background: #1a237e;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover {
+    color: #7986cb;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #283593;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-content a {
+    color: #ffffff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #1a237e;
+  }
+
+  .tech-section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .tech-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .tech-card {
+    background: #283593;
+    border-radius: 10px;
+    padding: 2rem;
+    transition: transform 0.3s;
+  }
+
+  .tech-card:hover {
+    transform: translateY(-10px);
+  }
+
+  .tech-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .tech-icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 1rem;
+    fill: #ffffff;
+  }
+
+  .specs-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+  }
+
+  .specs-table th,
+  .specs-table td {
+    padding: 1rem;
+    border: 1px solid #283593;
+    text-align: left;
+  }
+
+  .specs-table th {
+    background-color: #283593;
+  }
+
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    margin: 2rem 0;
+  }
+
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  footer {
+    background: #1a237e;
+    color: #ffffff;
+    text-align: center;
+    padding: 1.7rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+
+
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="missions.html">Missions</a></li>
+      <li><a href="technology.html">Technology</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li class="dropdown">
+        <a href="more.html" class="dropbtn">More</a>
+        <div class="dropdown-content">
+          <a href="education.html">Education</a>
+          <a href="careers.html">Careers</a>
+          <a href="partners.html">Partners</a>
+          <a href="history.html">History</a>
+          <a href="future.html">Future</a>
+          <a href="community.html">Community</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+<div class="tech-section">
+  <div class="tech-header">
+    <h1>Space Technology & Innovation</h1>
+    <p>Discovering the cutting-edge technologies that make space exploration possible</p>
+  </div>
+
+  <div class="tech-grid">
+    <div class="tech-card">
+      <img src="images/Propulsion-Systems.jpg" alt="Replaced Image"/>
+      <h2>Propulsion Systems</h2>
+      <p>Advanced rocket engines and innovative propulsion technologies.</p>
+      <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Wn17o8JLc8U?si=dpvi9HPduGWM06Zn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <div class="tech-card">
+      <img src="images/life-support-system.png" alt="Replaced Image"/>
+      <h2>Life Support Systems</h2>
+      <p>Technologies enabling human survival in space environments.</p>
+      <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/CcRsmsjHRq0?si=iWLuMNyV8uJ7dAXh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <div class="tech-card">
+      <img src="images/space-habibats-v2.jpg" alt="Replaced Image"/>
+      <h2>Space Habitats</h2>
+      <p>Next-generation living quarters for long-duration space missions.</p>
+      <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/K1hU14RlhRs?si=j6QH-nQIDIY92v-m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <table class="specs-table">
+    <tr>
+      <th>Technology</th>
+      <th>Current Status</th>
+      <th>Development Phase</th>
+      <th>Key Features</th>
+      <th>Target Implementation</th>
+    </tr>
+    <tr>
+      <td>Nuclear Thermal Propulsion</td>
+      <td>Testing</td>
+      <td>Phase 3</td>
+      <td>High efficiency, reduced travel time</td>
+      <td>2028</td>
+    </tr>
+    <tr>
+      <td>ECLSS Advanced</td>
+      <td>Operational</td>
+      <td>Deployed</td>
+      <td>90% water recovery, air purification</td>
+      <td>In Use</td>
+    </tr>
+    <tr>
+      <td>Inflatable Habitats</td>
+      <td>Testing</td>
+      <td>Phase 2</td>
+      <td>Expandable, radiation shielding</td>
+      <td>2026</td>
+    </tr>
+    <tr>
+      <td>Solar Electric Propulsion</td>
+      <td>Development</td>
+      <td>Phase 4</td>
+      <td>High efficiency, low thrust</td>
+      <td>2025</td>
+    </tr>
+  </table>
+</div>
+<footer>
+  <p style="text-align: center; margin-top: 1rem;">Copyright &copy; Eren Acar</p>
+</footer>
+
+</body></html>

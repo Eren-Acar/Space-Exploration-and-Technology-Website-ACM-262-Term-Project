@@ -1,0 +1,368 @@
+<html><head><base href="/" />
+<title>Future Projects - Space Research</title>
+<style>
+  :root {
+    --primary: #1a237e;
+    --secondary: #283593;
+    --text: #ffffff;
+    --background: #000000;
+    --accent: #7986cb;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Exo 2', sans-serif;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--text);
+  }
+
+  nav {
+    background: var(--primary);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover {
+    color: var(--accent);
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--secondary);
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-content a {
+    color: var(--text);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    background-color: var(--primary);
+  }
+
+  .future-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+  }
+
+  .hero-section {
+    position: relative;
+    text-align: center;
+    padding: 6rem 2rem;
+    background: linear-gradient(rgba(26, 35, 126, 0.7), rgba(40, 53, 147, 0.7));
+    border-radius: 15px;
+    margin-bottom: 4rem;
+    overflow: hidden;
+  }
+
+  .timeline {
+    position: relative;
+    padding: 2rem 0;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: var(--accent);
+  }
+
+  .timeline-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+  }
+
+  .timeline-content {
+    width: 45%;
+    padding: 2rem;
+    background: var(--secondary);
+    border-radius: 10px;
+    position: relative;
+  }
+
+  .timeline-item:nth-child(odd) .timeline-content {
+    margin-left: auto;
+  }
+
+  .timeline-content::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    background: var(--accent);
+    border-radius: 50%;
+  }
+
+  .timeline-item:nth-child(odd) .timeline-content::before {
+    left: -60px;
+  }
+
+  .timeline-item:nth-child(even) .timeline-content::before {
+    right: -60px;
+  }
+
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+  }
+
+  .project-card {
+    background: var(--secondary);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+
+  .project-card:hover {
+    transform: translateY(-10px);
+  }
+
+  .innovation-section {
+    margin: 4rem 0;
+    padding: 3rem;
+    background: rgba(40, 53, 147, 0.3);
+    border-radius: 15px;
+  }
+
+  .tech-progress {
+    margin: 1rem 0;
+  }
+
+  .progress-bar {
+    width: 100%;
+    height: 20px;
+    background: var(--primary);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 1rem 0;
+  }
+
+  .progress-fill {
+    height: 100%;
+    background: var(--accent);
+    width: 0;
+    transition: width 1.5s ease-in-out;
+  }
+
+  @media screen and (max-width: 768px) {
+    .timeline::before {
+      left: 0;
+    }
+    
+    .timeline-item {
+      flex-direction: column;
+    }
+    
+    .timeline-content {
+      width: 90%;
+      margin: 1rem auto !important;
+    }
+    
+    .timeline-content::before {
+      left: -40px !important;
+    }
+  }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav>
+  <ul class="nav-links">
+    <li><a href="https://space-explorer.com/home">Home</a></li>
+    <li><a href="https://space-explorer.com/missions">Missions</a></li>
+    <li><a href="https://space-explorer.com/technology">Technology</a></li>
+    <li><a href="https://space-explorer.com/gallery">Gallery</a></li>
+    <li><a href="https://space-explorer.com/news">News</a></li>
+    <li><a href="https://space-explorer.com/research">Research</a></li>
+    <li><a href="https://space-explorer.com/contact">Contact</a></li>
+    <li class="dropdown">
+      <a href="https://space-explorer.com/more" class="dropbtn">More</a>
+      <div class="dropdown-content">
+        <a href="https://space-explorer.com/education">Education</a>
+        <a href="https://space-explorer.com/careers">Careers</a>
+        <a href="https://space-explorer.com/partners">Partners</a>
+        <a href="https://space-explorer.com/history">History</a>
+        <a href="https://space-explorer.com/future">Future</a>
+        <a href="https://space-explorer.com/community">Community</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<div class="future-container">
+  <div class="hero-section">
+    <h1>Future Projects</h1>
+    <p>Shaping tomorrow's space exploration through groundbreaking innovations</p>
+  </div>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <h3>2024</h3>
+        <h2>Lunar Gateway Construction</h2>
+        <p>Beginning construction of the first space station to orbit the Moon</p>
+      </div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <h3>2025</h3>
+        <h2>Mars Sample Return</h2>
+        <p>First mission to return Martian samples to Earth</p>
+      </div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <h3>2026</h3>
+        <h2>Europa Clipper Launch</h2>
+        <p>Mission to study Jupiter's moon Europa</p>
+      </div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <h3>2028</h3>
+        <h2>First Lunar Base</h2>
+        <p>Establishment of permanent human presence on the Moon</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="innovation-section">
+    <h2>Technology Development Progress</h2>
+    <div class="tech-progress">
+      <h3>Advanced Propulsion Systems</h3>
+      <div class="progress-bar">
+        <div class="progress-fill" data-progress="75"></div>
+      </div>
+      
+      <h3>Artificial Gravity Systems</h3>
+      <div class="progress-bar">
+        <div class="progress-fill" data-progress="45"></div>
+      </div>
+      
+      <h3>Radiation Shielding</h3>
+      <div class="progress-bar">
+        <div class="progress-fill" data-progress="85"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-grid">
+    <div class="project-card">
+      <svg viewBox="0 0 100 100" width="80" height="80">
+        <circle cx="50" cy="50" r="40" fill="none" stroke="white" stroke-width="2"/>
+        <path d="M30,50 Q50,20 70,50" fill="none" stroke="white" stroke-width="2"/>
+      </svg>
+      <h3>Interstellar Probe</h3>
+      <p>Exploring beyond our solar system</p>
+    </div>
+    
+    <div class="project-card">
+      <svg viewBox="0 0 100 100" width="80" height="80">
+        <rect x="20" y="20" width="60" height="60" fill="none" stroke="white" stroke-width="2"/>
+        <circle cx="50" cy="50" r="20" fill="none" stroke="white" stroke-width="2"/>
+      </svg>
+      <h3>Space Solar Power</h3>
+      <p>Harvesting solar energy in space</p>
+    </div>
+    
+    <div class="project-card">
+      <svg viewBox="0 0 100 100" width="80" height="80">
+        <polygon points="50,20 80,80 20,80" fill="none" stroke="white" stroke-width="2"/>
+        <circle cx="50" cy="50" r="15" fill="none" stroke="white" stroke-width="2"/>
+      </svg>
+      <h3>Asteroid Mining</h3>
+      <p>Resource extraction from asteroids</p>
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Timeline animation
+  const timelineItems = document.querySelectorAll('.timeline-item');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = 1;
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  timelineItems.forEach(item => {
+    observer.observe(item);
+  });
+
+  // Progress bars animation
+  const progressBars = document.querySelectorAll('.progress-fill');
+  const progressObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const progress = entry.target.getAttribute('data-progress');
+        entry.target.style.width = `${progress}%`;
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  progressBars.forEach(bar => {
+    progressObserver.observe(bar);
+  });
+});
+</script>
+
+</body></html>

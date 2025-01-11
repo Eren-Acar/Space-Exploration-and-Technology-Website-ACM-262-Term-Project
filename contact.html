@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contact Us - Space Research</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<meta charset="UTF-8">
+<meta name="description" content="Explore the final frontier with the latest in space exploration, technology, missions, and more.">
+<meta name="keywords" content="Space Exploration, Technology, Missions, Gallery, News, Research, Education, Careers, Partners, History, Future, Community">
+<meta name="author" content="Eren Acar">
+<style>
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Exo 2', sans-serif;
+  }
+
+  body {
+    background-color: #1A1A1A;
+    color: #ffffff;
+  }
+
+  nav {
+    background: #1a237e;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover {
+    color: #7986cb;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #283593;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-content a {
+    color: #ffffff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #1a237e;
+  }
+
+  .contact-header {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: url("images/main-background-page.avif"), linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+    background-size: cover;
+    background-position: center;
+  }
+
+  .contact-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+
+  .contact-info {
+    background: #283593;
+    padding: 2rem;
+    border-radius: 10px;
+  }
+
+  .contact-form {
+    background: #283593;
+    padding: 2rem;
+    border-radius: 10px;
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #7986cb;
+    border-radius: 5px;
+    background: rgba(255,255,255,0.1);
+    color: #ffffff;
+  }
+
+  .form-group textarea {
+    height: 150px;
+    resize: vertical;
+  }
+
+  .submit-btn {
+    background: #7986cb;
+    color: #ffffff;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .submit-btn:hover {
+    background: #5c6bc0;
+  }
+
+  .contact-info h3 {
+    margin-bottom: 1rem;
+  }
+
+  .contact-info p {
+    margin-bottom: 0.5rem;
+  }
+
+  .map-container {
+    margin-top: 2rem;
+    padding: 2rem;
+  }
+
+  .office-locations {
+    margin: 2rem auto;
+    max-width: 1200px;
+    padding: 2rem;
+  }
+
+  .location-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #283593;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .location-table th,
+  .location-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #7986cb;
+  }
+
+  .location-table th {
+    background: #1a237e;
+  }
+  
+  footer {
+    background: #1a237e;
+    color: #ffffff;
+    text-align: center;
+    padding: 1.7rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="missions.html">Missions</a></li>
+      <li><a href="technology.html">Technology</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li class="dropdown">
+        <a href="more.html" class="dropbtn">More</a>
+        <div class="dropdown-content">
+          <a href="education.html">Education</a>
+          <a href="careers.html">Careers</a>
+          <a href="partners.html">Partners</a>
+          <a href="history.html">History</a>
+          <a href="future.html">Future</a>
+          <a href="community.html">Community</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+<div class="contact-header">
+  <h1>Contact Us</h1>
+  <p>Get in touch with our space research team</p>
+</div>
+
+<div class="contact-container">
+  <div class="contact-info">
+    <h3>Contact Information</h3>
+    <p><strong>Main Office:</strong> 123 Space Avenue, Houston, TX 77058</p>
+    <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+    <p><strong>Email:</strong> contact@space-explorer.com</p>
+    <p><strong>Hours:</strong> Monday - Friday: 9:00 AM - 5:00 PM CST</p>
+  </div>
+
+  <div class="contact-form">
+    <h3>Send us a Message</h3>
+    <form id="contactForm" action="https://www.w3schools.com/action_page.php" target="_blank">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="subject" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+  </div>
+</div>
+
+<div class="office-locations">
+  <h2>Global Offices</h2>
+  <table class="location-table">
+    <thead>
+      <tr>
+        <th>Location</th>
+        <th>Address</th>
+        <th>Phone</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Houston, TX</td>
+        <td>123 Space Avenue, Houston, TX 77058</td>
+        <td>+1 (555) 123-4567</td>
+        <td>houston@space-explorer.com</td>
+      </tr>
+      <tr>
+        <td>Cape Canaveral, FL</td>
+        <td>456 Launch Road, Cape Canaveral, FL 32920</td>
+        <td>+1 (555) 234-5678</td>
+        <td>canaveral@space-explorer.com</td>
+      </tr>
+      <tr>
+        <td>Washington, DC</td>
+        <td>789 Research Blvd, Washington, DC 20024</td>
+        <td>+1 (555) 345-6789</td>
+        <td>dc@space-explorer.com</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="map-container">
+  <h2>Find Us</h2>
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3471.5775185782116!2d-95.0927279!3d29.5571368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86409da671292593%3A0xf684f098a7237a30!2sNASA%20Johnson%20Space%20Center!5e0!3m2!1sen!2sus!4v1648338142367!5m2!1sen!2sus"
+    width="100%"
+    height="450"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy">
+  </iframe>
+</div>
+
+<footer>Copyright &copy; Eren Acar</footer>
+</body>
+</html>

@@ -1,0 +1,344 @@
+<html><head><base href="/" />
+<title>Careers - Space Research</title>
+<style>
+  :root {
+    --primary: #1a237e;
+    --secondary: #283593;
+    --text: #ffffff;
+    --background: #000000;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Exo 2', sans-serif;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--text);
+  }
+
+  nav {
+    background: var(--primary);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover {
+    color: #7986cb;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--secondary);
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-content a {
+    color: var(--text);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    background-color: var(--primary);
+  }
+
+  .careers-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+  }
+
+  .job-section {
+    margin-bottom: 3rem;
+    background: var(--secondary);
+    border-radius: 10px;
+    padding: 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease-out;
+  }
+
+  .job-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .job-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 1.5rem;
+  }
+
+  .job-card h3 {
+    margin-bottom: 1rem;
+    color: #7986cb;
+  }
+
+  .job-details {
+    margin: 1rem 0;
+  }
+
+  .job-details li {
+    margin-bottom: 0.5rem;
+    list-style-type: none;
+  }
+
+  .apply-button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: #7986cb;
+    color: var(--text);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+    margin-top: 1rem;
+  }
+
+  .apply-button:hover {
+    background: #5c6bc0;
+  }
+
+  .benefits-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .benefit-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .application-form {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text);
+  }
+
+  .submit-button {
+    background: #7986cb;
+    color: var(--text);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .submit-button:hover {
+    background: #5c6bc0;
+  }
+
+  @media screen and (max-width: 768px) {
+    .job-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav>
+  <ul class="nav-links">
+    <li><a href="https://space-explorer.com/home">Home</a></li>
+    <li><a href="https://space-explorer.com/missions">Missions</a></li>
+    <li><a href="https://space-explorer.com/technology">Technology</a></li>
+    <li><a href="https://space-explorer.com/gallery">Gallery</a></li>
+    <li><a href="https://space-explorer.com/news">News</a></li>
+    <li><a href="https://space-explorer.com/research">Research</a></li>
+    <li><a href="https://space-explorer.com/contact">Contact</a></li>
+    <li class="dropdown">
+      <a href="https://space-explorer.com/more" class="dropbtn">More</a>
+      <div class="dropdown-content">
+        <a href="https://space-explorer.com/education">Education</a>
+        <a href="https://space-explorer.com/careers">Careers</a>
+        <a href="https://space-explorer.com/partners">Partners</a>
+        <a href="https://space-explorer.com/history">History</a>
+        <a href="https://space-explorer.com/future">Future</a>
+        <a href="https://space-explorer.com/community">Community</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<div class="careers-container">
+  <h1>Career Opportunities</h1>
+  <p>Join our team of innovative space explorers and make history.</p>
+
+  <div class="job-section">
+    <h2>Current Openings</h2>
+    <div class="job-grid">
+      <div class="job-card">
+        <h3>Aerospace Engineer</h3>
+        <p>Design and develop spacecraft and propulsion systems</p>
+        <ul class="job-details">
+          <li>Location: Houston, TX</li>
+          <li>Type: Full-time</li>
+          <li>Experience: 5+ years</li>
+        </ul>
+        <a href="https://space-explorer.com/careers/aerospace-engineer" class="apply-button">Apply Now</a>
+      </div>
+      <div class="job-card">
+        <h3>Research Scientist</h3>
+        <p>Conduct cutting-edge space research and experiments</p>
+        <ul class="job-details">
+          <li>Location: Cape Canaveral, FL</li>
+          <li>Type: Full-time</li>
+          <li>Experience: 3+ years</li>
+        </ul>
+        <a href="https://space-explorer.com/careers/research-scientist" class="apply-button">Apply Now</a>
+      </div>
+      <div class="job-card">
+        <h3>Mission Controller</h3>
+        <p>Monitor and control spacecraft operations</p>
+        <ul class="job-details">
+          <li>Location: Houston, TX</li>
+          <li>Type: Full-time</li>
+          <li>Experience: 4+ years</li>
+        </ul>
+        <a href="https://space-explorer.com/careers/mission-controller" class="apply-button">Apply Now</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="job-section">
+    <h2>Benefits and Perks</h2>
+    <div class="benefits-list">
+      <div class="benefit-item">
+        <h3>Healthcare</h3>
+        <p>Comprehensive medical, dental, and vision coverage</p>
+      </div>
+      <div class="benefit-item">
+        <h3>Education</h3>
+        <p>Continuous learning and development opportunities</p>
+      </div>
+      <div class="benefit-item">
+        <h3>Work-Life Balance</h3>
+        <p>Flexible scheduling and remote work options</p>
+      </div>
+      <div class="benefit-item">
+        <h3>Retirement</h3>
+        <p>401(k) matching and retirement planning</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="job-section">
+    <h2>Application Form</h2>
+    <form class="application-form">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="position">Position</label>
+        <select id="position" name="position" required>
+          <option value="">Select a position</option>
+          <option value="aerospace-engineer">Aerospace Engineer</option>
+          <option value="research-scientist">Research Scientist</option>
+          <option value="mission-controller">Mission Controller</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="resume">Resume/CV</label>
+        <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+      </div>
+      <div class="form-group">
+        <label for="cover-letter">Cover Letter</label>
+        <textarea id="cover-letter" name="cover-letter" rows="5" required></textarea>
+      </div>
+      <button type="submit" class="submit-button">Submit Application</button>
+    </form>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const sections = document.querySelectorAll('.job-section');
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = 1;
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+
+  document.querySelector('.application-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Thank you for your application! We will review it and get back to you soon.');
+  });
+});
+</script>
+
+</body></html>

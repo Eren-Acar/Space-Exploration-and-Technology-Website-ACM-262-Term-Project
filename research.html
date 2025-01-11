@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Space Research</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<meta charset="UTF-8">
+<meta name="description" content="Explore the final frontier with the latest in space exploration, technology, missions, and more.">
+<meta name="keywords" content="Space Exploration, Technology, Missions, Gallery, News, Research, Education, Careers, Partners, History, Future, Community">
+<meta name="author" content="Eren Acar">
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Exo 2', sans-serif;
+  }
+
+  body {
+    background-color: #1A1A1A;
+    color: #ffffff;
+  }
+
+  nav {
+    background: #1a237e;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover {
+    color: #7986cb;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #283593;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-content a {
+    color: #ffffff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #1a237e;
+  }
+
+  .research-header {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: url("images/main-background-page.avif"), linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+    background-size: cover;
+    background-position: center;
+  }
+
+  .research-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .research-section {
+    background: #283593;
+    padding: 2rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+
+  .research-section:hover {
+    transform: translateY(-5px);
+  }
+
+  .research-icon {
+    text-align: center;
+    margin-bottom: 1rem;
+
+  }
+
+  .research-icon img {
+    width: 100%;
+    max-width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+
+
+  .research-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .research-description {
+    line-height: 1.6;
+    color: #ddd;
+    text-align: justify;
+  }
+
+  .publications {
+    margin-top: 4rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .publication-list {
+    list-style: none;
+  }
+
+  .publication-item {
+    background: #283593;
+    margin-bottom: 1rem;
+    padding: 1.5rem;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+  }
+
+  .publication-item:hover {
+    transform: translateX(10px);
+  }
+
+  .publication-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .publication-authors {
+    color: #aaa;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .publication-journal {
+    color: #7986cb;
+    font-style: italic;
+  }
+
+  .stats-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+  }
+
+  .stat-box {
+    background: #283593;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #7986cb;
+  }
+
+  .stat-label {
+    font-size: 1rem;
+    color: #ddd;
+  }
+
+  footer {
+    background: #1a237e;
+    color: #ffffff;
+    text-align: center;
+    padding: 1.7rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="missions.html">Missions</a></li>
+      <li><a href="technology.html">Technology</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li class="dropdown">
+        <a href="more.html" class="dropbtn">More</a>
+        <div class="dropdown-content">
+          <a href="education.html">Education</a>
+          <a href="careers.html">Careers</a>
+          <a href="partners.html">Partners</a>
+          <a href="history.html">History</a>
+          <a href="future.html">Future</a>
+          <a href="community.html">Community</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+<div class="research-header">
+  <h1>Space Research & Development</h1>
+  <p>Exploring the frontiers of space science and technology</p>
+</div>
+
+<div class="stats-container">
+  <div class="stat-box">
+    <div class="stat-number">250+</div>
+    <div class="stat-label">Active Research Projects</div>
+  </div>
+  <div class="stat-box">
+    <div class="stat-number">1500+</div>
+    <div class="stat-label">Publications</div>
+  </div>
+  <div class="stat-box">
+    <div class="stat-number">80+</div>
+    <div class="stat-label">Partner Institutions</div>
+  </div>
+  <div class="stat-box">
+    <div class="stat-number">45+</div>
+    <div class="stat-label">Countries Involved</div>
+  </div>
+</div>
+
+<div class="research-grid">
+  <div class="research-section">
+    <div class="research-icon">
+      <img src="images/astrophysics.jpg" alt="Replaced Image"/>
+    </div>
+    <h2 class="research-title">Astrophysics</h2>
+    <p class="research-description">Investigating the fundamental physics governing cosmic phenomena, from black holes to dark matter, using advanced theoretical models and observational data.</p>
+  </div>
+
+  <div class="research-section">
+    <div class="research-icon">
+      <img src="images/space-technology.png" alt="Replaced Image"/>
+    </div>
+    <h2 class="research-title">Space Technology</h2>
+    <p class="research-description">Developing cutting-edge technologies for space exploration, including propulsion systems, life support systems, and advanced materials.</p>
+  </div>
+
+  <div class="research-section">
+    <div class="research-icon">
+      <img src="images/astrobiology.jpg" alt="Replaced Image"/>
+    </div>
+    <h2 class="research-title">Astrobiology</h2>
+    <p class="research-description">Studying the potential for life beyond Earth, focusing on extremophiles, biosignatures, and the conditions necessary for life in the universe.</p>
+  </div>
+</div>
+
+<div class="publications">
+  <h2>Recent Publications</h2>
+  <ul class="publication-list">
+    <li class="publication-item">
+      <h3 class="publication-title">Quantum Entanglement in Space: New Frontiers in Space Communication</h3>
+      <p class="publication-authors">Dr. Sarah Johnson, Dr. Michael Chen, Prof. David Williams</p>
+      <p class="publication-journal">Nature Astronomy, 2023</p>
+    </li>
+    <li class="publication-item">
+      <h3 class="publication-title">Novel Approaches to Dark Matter Detection Using Space-Based Instruments</h3>
+      <p class="publication-authors">Prof. Elena Rodriguez, Dr. James Smith</p>
+      <p class="publication-journal">The Astrophysical Journal, 2023</p>
+    </li>
+    <li class="publication-item">
+      <h3 class="publication-title">Breakthrough in Space Propulsion: The Quantum Drive Theory</h3>
+      <p class="publication-authors">Dr. Robert Zhang, Dr. Lisa Anderson</p>
+      <p class="publication-journal">Space Technology Review, 2023</p>
+    </li>
+  </ul>
+</div>
+
+<footer>
+  <p>&copy; 2023 Space Exploration Institute. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
