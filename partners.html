@@ -1,13 +1,13 @@
-<html><head><base href="/" />
+<!DOCTYPE html>
+<html>
+<head>
 <title>Partners - Space Research</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<meta charset="UTF-8">
+<meta name="description" content="Explore the final frontier with the latest in space exploration, technology, missions, and more.">
+<meta name="keywords" content="Space Exploration, Technology, Missions, Gallery, News, Research, Education, Careers, Partners, History, Future, Community">
+<meta name="author" content="Eren Acar">
 <style>
-  :root {
-    --primary: #1a237e;
-    --secondary: #283593;
-    --text: #ffffff;
-    --background: #000000;
-  }
-
   * {
     margin: 0;
     padding: 0;
@@ -16,12 +16,12 @@
   }
 
   body {
-    background-color: var(--background);
-    color: var(--text);
+    background-color: #1A1A1A;
+    color: #ffffff;;
   }
 
   nav {
-    background: var(--primary);
+    background: #1a237e;
     padding: 1rem;
     position: sticky;
     top: 0;
@@ -36,7 +36,7 @@
   }
 
   .nav-links a {
-    color: var(--text);
+    color: #ffffff;;
     text-decoration: none;
     font-size: 1.1rem;
     transition: color 0.3s;
@@ -54,7 +54,7 @@
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: var(--secondary);
+    background-color: #283593;
     min-width: 160px;
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
     z-index: 1;
@@ -65,14 +65,14 @@
   }
 
   .dropdown-content a {
-    color: var(--text);
+    color: #ffffff;;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
   }
 
   .dropdown-content a:hover {
-    background-color: var(--primary);
+    background-color: #1a237e;
   }
 
   .partners-container {
@@ -97,7 +97,7 @@
   }
 
   .partner-card {
-    background: var(--secondary);
+    background: #283593;
     border-radius: 10px;
     padding: 2rem;
     text-align: center;
@@ -130,7 +130,7 @@
   }
 
   .stat-card {
-    background: var(--primary);
+    background: #1a237e;
     padding: 2rem;
     border-radius: 10px;
   }
@@ -139,13 +139,21 @@
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 1rem;
-  }
-
-  @media screen and (max-width: 768px) {
-    .partner-grid {
-      grid-template-columns: 1fr;
     }
+  
+    footer {
+    background: #1a237e;
+    color: #ffffff;
+    text-align: center;
+    padding: 1.7rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
   }
+  
+
+
+
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -153,22 +161,22 @@
 
 <nav>
   <ul class="nav-links">
-    <li><a href="https://space-explorer.com/home">Home</a></li>
-    <li><a href="https://space-explorer.com/missions">Missions</a></li>
-    <li><a href="https://space-explorer.com/technology">Technology</a></li>
-    <li><a href="https://space-explorer.com/gallery">Gallery</a></li>
-    <li><a href="https://space-explorer.com/news">News</a></li>
-    <li><a href="https://space-explorer.com/research">Research</a></li>
-    <li><a href="https://space-explorer.com/contact">Contact</a></li>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="missions.html">Missions</a></li>
+    <li><a href="technology.html">Technology</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="news.html">News</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="contact.html">Contact</a></li>
     <li class="dropdown">
-      <a href="https://space-explorer.com/more" class="dropbtn">More</a>
+      <a href="more.html" class="dropbtn">More</a>
       <div class="dropdown-content">
-        <a href="https://space-explorer.com/education">Education</a>
-        <a href="https://space-explorer.com/careers">Careers</a>
-        <a href="https://space-explorer.com/partners">Partners</a>
-        <a href="https://space-explorer.com/history">History</a>
-        <a href="https://space-explorer.com/future">Future</a>
-        <a href="https://space-explorer.com/community">Community</a>
+        <a href="education.html">Education</a>
+        <a href="careers.html">Careers</a>
+        <a href="partners.html">Partners</a>
+        <a href="history.html">History</a>
+        <a href="future.html">Future</a>
+        <a href="community.html">Community</a>
       </div>
     </li>
   </ul>
@@ -203,26 +211,17 @@
     <h2>Space Agencies</h2>
     <div class="partner-grid">
       <div class="partner-card">
-        <svg class="partner-icon" viewBox="0 0 100 100">
-          <circle cx="50" cy="50" r="45" fill="none" stroke="#fff" stroke-width="2"/>
-          <path d="M20,50 L80,50 M50,20 L50,80" stroke="#fff" stroke-width="2"/>
-        </svg>
+        <img src="images/nasa.png" alt="NASA Logo">
         <h3>NASA</h3>
         <p>National Aeronautics and Space Administration</p>
       </div>
       <div class="partner-card">
-        <svg class="partner-icon" viewBox="0 0 100 100">
-          <circle cx="50" cy="50" r="45" fill="none" stroke="#fff" stroke-width="2"/>
-          <path d="M25,50 A25,25 0 0,1 75,50" stroke="#fff" stroke-width="2" fill="none"/>
-        </svg>
+        <img src="images/esa.png" alt="ESA Logo">
         <h3>ESA</h3>
         <p>European Space Agency</p>
       </div>
       <div class="partner-card">
-        <svg class="partner-icon" viewBox="0 0 100 100">
-          <rect x="25" y="25" width="50" height="50" fill="none" stroke="#fff" stroke-width="2"/>
-          <circle cx="50" cy="50" r="20" fill="none" stroke="#fff" stroke-width="2"/>
-        </svg>
+        <img src="images/jaxa.png" alt="JAXA Logo">
         <h3>JAXA</h3>
         <p>Japan Aerospace Exploration Agency</p>
       </div>
@@ -233,24 +232,17 @@
     <h2>Research Institutions</h2>
     <div class="partner-grid">
       <div class="partner-card">
-        <svg class="partner-icon" viewBox="0 0 100 100">
-          <polygon points="50,20 80,80 20,80" fill="none" stroke="#fff" stroke-width="2"/>
-        </svg>
+        <img src="images/university.png" alt="Universities Logo">
         <h3>Universities</h3>
         <p>Leading academic institutions worldwide</p>
       </div>
       <div class="partner-card">
-        <svg class="partner-icon" viewBox="0 0 100 100">
-          <rect x="30" y="30" width="40" height="40" fill="none" stroke="#fff" stroke-width="2"/>
-          <circle cx="50" cy="50" r="25" fill="none" stroke="#fff" stroke-width="2"/>
-        </svg>
+        <img src="images/research-labs.png" alt= "Research Labs Logo"> 
         <h3>Research Labs</h3>
         <p>Specialized research facilities</p>
       </div>
       <div class="partner-card">
-        <svg class="partner-icon" viewBox="0 0 100 100">
-          <path d="M20,80 L50,20 L80,80" fill="none" stroke="#fff" stroke-width="2"/>
-        </svg>
+        <img src="images/think-tank.png" alt="Think Tanks Logo">
         <h3>Think Tanks</h3>
         <p>Space policy and strategy organizations</p>
       </div>
@@ -261,53 +253,29 @@
     <h2>Industry Partners</h2>
     <div class="partner-grid">
       <div class="partner-card">
-        <svg class="partner-icon" viewBox="0 0 100 100">
-          <circle cx="50" cy="50" r="30" fill="none" stroke="#fff" stroke-width="2"/>
-          <path d="M20,50 L80,50" stroke="#fff" stroke-width="2"/>
-        </svg>
+        <img src="images/aerospace-companies.png" alt="Aerospace Companies Logo">
         <h3>Aerospace Companies</h3>
         <p>Leading spacecraft and equipment manufacturers</p>
       </div>
       <div class="partner-card">
-        <svg class="partner-icon" viewBox="0 0 100 100">
-          <rect x="25" y="25" width="50" height="50" fill="none" stroke="#fff" stroke-width="2" rx="10"/>
-        </svg>
+        <img src="images/firms.png" alt= "Firms Logo">
         <h3>Technology Firms</h3>
         <p>Innovation and software development partners</p>
       </div>
       <div class="partner-card">
-        <svg class="partner-icon" viewBox="0 0 100 100">
-          <path d="M20,80 C20,40 80,40 80,80" fill="none" stroke="#fff" stroke-width="2"/>
-        </svg>
+        <img src="images/startup.png" alt="Startups Logo">
         <h3>Startups</h3>
         <p>Emerging space technology companies</p>
       </div>
     </div>
   </div>
+
 </div>
+<footer>
+  <p style="text-align: center; margin-top: 1rem;">Copyright &copy; Eren Acar</p>
+</footer>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const cards = document.querySelectorAll('.partner-card');
-  
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = 1;
-        entry.target.style.transform = 'translateY(0)';
-      }
-    });
-  }, {
-    threshold: 0.1
-  });
 
-  cards.forEach(card => {
-    card.style.opacity = 0;
-    card.style.transform = 'translateY(20px)';
-    card.style.transition = 'all 0.5s ease-out';
-    observer.observe(card);
-  });
-});
-</script>
+
 
 </body></html>
